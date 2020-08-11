@@ -1,4 +1,4 @@
-package backjoon;
+package backjoon_for;
 //빠른 A+B Buffered로 입출력
 
 import java.io.BufferedReader;
