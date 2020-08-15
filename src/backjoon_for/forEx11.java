@@ -1,33 +1,33 @@
 package backjoon_for;
 
-//별 찍기 - 2
-//첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
-//하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
+//X보다 작은 수
+//정수 N개로 이루어진 수열 A와 정수 X가 주어진다. 이때, A에서 X보다 작은 수를 모두 출력하는 프로그램을 작성하시오.
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
 
-public class forEx10 {
+public class forEx11 {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+		StringTokenizer st ;
+//		첫째 줄에 N과 X가 주어진다. (1 ≤ N, X ≤ 10,000)
+//		둘째 줄에 수열 A를 이루는 정수 N개가 주어진다. 주어지는 정수는 모두 1보다 크거나 같고, 10,000보다 작거나 같은 정수이다.
+		st = new StringTokenizer(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int x = Integer.parseInt(st.nextToken());
+		st = new StringTokenizer(br.readLine());
 		
-//		첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
-		int n = Integer.parseInt(br.readLine());
 		for(int i=0; i<n; i++) {
-			for(int j=i+1; j<n; j++) {
-//			첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
-			bw.write(" ");
-			}
-			for(int k=n-i; k<=n; k++) {
-			bw.write("*");
-			}
-			bw.write("\n");
+			int a = Integer.parseInt(st.nextToken());
+//			X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한다. X보다 작은 수는 적어도 하나 존재한다.
+			if(a < x)
+			bw.write(a+" ");
 		}
 		bw.flush();
-
 	}
 }
