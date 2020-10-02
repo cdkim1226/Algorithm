@@ -6,11 +6,13 @@ public class basic1037 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+		long a = sc.nextLong();
+		long b = sc.nextLong();
+		
 		sc.close();
 		
-		char result = (char)n;
-		System.out.println(result);
+		long result = a+b;
+		System.out.print(result);
 	}
 	
 
